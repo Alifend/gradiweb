@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
       created_at: moment(producto.variants[0].created_at).format("YYYY-MM-DD"),
     };
   });
-
+  console.log(salida);
   res.send(salida);
 });
 
