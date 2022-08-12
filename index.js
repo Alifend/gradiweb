@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
   const salida = {};
   response.body.products.forEach((producto) => {
     salida[producto.title] = {
-      price: producto.variants[0].price,
+      price: Number(producto.variants[0].price),
       status: producto.status,
       created_at: moment(producto.variants[0].created_at).format("YYYY-MM-DD"),
     };
